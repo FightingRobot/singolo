@@ -101,7 +101,6 @@ p, h1, h2, a {
     max-width: 1020px;
     width: 100%;
     margin: 0 auto;
-    /* padding: 0 10px; */
 }
 
 .header__content {
@@ -117,6 +116,10 @@ p, h1, h2, a {
 .header__left {
     display: flex;
     width: 50%;
+}
+
+.header__left h1 {
+    display: none;
 }
 
 .header__right {
@@ -255,23 +258,23 @@ p, h1, h2, a {
     padding-top: 62px;
 }
 
-.main__cards h1 {
+.main__description {
+    overflow: hidden;
+}
+
+.main__description h2 {
     font-family: 'Lato Black', sans-serif;
     font-size: 30px;
     color: #666d89;
     margin-bottom: 23px;
-    /* font-weight: 900; */
 }
 
-.main__cards .description {
+.main__description p {
     font-size: 18px;
     color: #767e9e;
     line-height: 30px;
     margin-bottom: 44px;
-    /* font-weight: 300; */
-    /* letter-spacing: -0.04px; */
     letter-spacing: -0.17px;
-    /* word-spacing: -2px; */
     text-align: justify;
 }
 
@@ -286,6 +289,7 @@ p, h1, h2, a {
     justify-content: space-between;
     height: 86px;
     margin-bottom: 37px;
+    overflow: hidden;
 }
 
 .card:nth-child(3n+2) {
@@ -305,18 +309,10 @@ p, h1, h2, a {
     line-height: 21.56px;
     text-align: justify;
     color: #767e9e;
-    /* font-weight: 300; */
-    /* word-wrap: break-word; */
-    /* word-spacing: 3px; */
-    /* white-space: pre-line; */
-    /* font-weight: 600; */
-    /* word-break: normal; */
-    /* text-overflow: clip; */ /*ВОТ ЭТО НОРМЕС В ПРИНЦИПЕ*/
 }
 
 .card__image {
     margin-right: 20px;
     margin-top: 2px;
     margin-left: 1px;
-    /* margin-bottom: 64px; */
 }

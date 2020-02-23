@@ -161,6 +161,10 @@ p, h1, h2, a {
     color: #f06c64;
 }
 
+.header__right a:active {
+    color: #c7c8c7;
+}
+
 .header__menu {
     margin-top: 10px;
     display: flex;
@@ -203,6 +207,11 @@ p, h1, h2, a {
     cursor: pointer;
 }
 
+.angle-left:active::before,
+.angle-left:active::after {
+    background-color: #666d89;
+}
+
 .angle-right {
     position: relative;
     top: 5px;
@@ -236,6 +245,11 @@ p, h1, h2, a {
 .angle-right:hover::after {
     background-color: #2d303a;
     cursor: pointer;
+}
+
+.angle-right:active::before,
+.angle-right:active::after {
+    background-color: #666d89;
 }
 
 .main__slider {

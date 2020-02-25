@@ -110,19 +110,22 @@ p, h1, h2, a, span {
 }
 
 .portfolio__description {
-    margin-bottom: 21px;
+    margin-bottom: 15px;
 }
 
 .main__content h2 {
     color: #666d89;
     font-size: 30px;
     font-family: 'Lato Black', sans-serif;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
 }
 
 .main__content p {
     color: #767e9e;
     font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.17px;
+    text-align: justify;
 }
 
 .portfolio__tags {
@@ -136,6 +139,7 @@ p, h1, h2, a, span {
     padding: 3px 6px;
     border-radius: 5px;
     margin-right: 7px;
+    /* line-height: 21.56px; */
 }
 
 .portfolio__tags span:hover {
@@ -147,6 +151,8 @@ p, h1, h2, a, span {
 .portfolio__cards {
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
+    max-height: 621px;
 }
 
 .portfolio__card {
@@ -157,6 +163,10 @@ p, h1, h2, a, span {
     margin-top: 20px;
 }
 
+.portfolio__card img {
+    width: 100%;
+}
+
 .portfolio__card:nth-child(4n+1) {
     margin-left: 0;
 }
@@ -165,6 +175,81 @@ p, h1, h2, a, span {
     margin-right: 0;
 }
 
-.image-wrapper img {
+.about {
+    background-color: #f2f2f2;
+    border-bottom: 6px solid #ffffff;
+    padding: 67px 40px;
+}
+
+.about__description {
+    margin-bottom: 44px;
+}
+
+.about__description p {
+    line-height: 30px;
+    letter-spacing: -0.17px;
+    text-align: justify;
+}
+
+.about__cards {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+
+.about__card {
+    max-width: 300px;
     width: 100%;
+}
+
+.about__card:nth-child(2n+2) {
+    margin-left: 19px;
+    margin-right: 21px;
+}
+
+.about__card h3 {
+    color: #666d89;
+    font-size: 18px;
+    font-family: 'Lato Black', sans-serif;
+    margin-bottom: 9px;
+    /* max-width: inherit; РАЗОБРАТЬСЯ С ЭТИМ */
+}
+
+.about__card p {
+    font-size: 12px;
+    line-height: 21.56px;
+    text-align: justify;
+    letter-spacing: -0.17px;
+    /* color: #767e9e; */
+}
+
+.about__photo {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 18px;
+}
+
+.about__photo img {
+    width: 100%;
+}
+
+.about__tags {
+    display: flex;
+    margin-top: 23px;
+}
+
+.about__tag {
+    border: 1px solid #666d89;
+    border-radius: 50px;
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    line-height: 37px;
+    margin-right: 8px;
+}
+
+.about__tag:hover {
+    /* border-color: red; */
+    border-color: brown;
+    cursor: pointer;
 }

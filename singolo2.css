@@ -178,11 +178,11 @@ p, h1, h2, a, span {
 .about {
     background-color: #f2f2f2;
     border-bottom: 6px solid #ffffff;
-    padding: 67px 40px;
+    padding: 65px 40px;
 }
 
 .about__description {
-    margin-bottom: 44px;
+    margin-bottom: 46px;
 }
 
 .about__description p {
@@ -197,17 +197,17 @@ p, h1, h2, a, span {
     /* justify-content: space-between; */
 }
 
-.about__card {
+.about-card {
     max-width: 300px;
     width: 100%;
 }
 
-.about__card:nth-child(2n+2) {
+.about-card:nth-child(2n+2) {
     margin-left: 19px;
     margin-right: 21px;
 }
 
-.about__card h3 {
+.about-card h3 {
     color: #666d89;
     font-size: 18px;
     font-family: 'Lato Black', sans-serif;
@@ -215,7 +215,7 @@ p, h1, h2, a, span {
     /* max-width: inherit; РАЗОБРАТЬСЯ С ЭТИМ */
 }
 
-.about__card p {
+.about-card p {
     font-size: 12px;
     line-height: 21.56px;
     text-align: justify;
@@ -223,22 +223,22 @@ p, h1, h2, a, span {
     /* color: #767e9e; */
 }
 
-.about__photo {
+.about-card__photo {
     width: 300px;
     height: 300px;
     margin-bottom: 18px;
 }
 
-.about__photo img {
+.about-card__photo img {
     width: 100%;
 }
 
-.about__tags {
+.about-card__tags {
     display: flex;
     margin-top: 23px;
 }
 
-.about__tag {
+.about-card__tag {
     border: 1px solid #666d89;
     border-radius: 50px;
     text-align: center;
@@ -248,7 +248,7 @@ p, h1, h2, a, span {
     margin-right: 8px;
 }
 
-.about__tag:hover {
+.about-card__tag:hover {
     /* border-color: red; */
     border-color: brown;
     cursor: pointer;

@@ -72,12 +72,13 @@ table {
     font-family: "Lato Black";
     font-style: normal;
     font-weight: 900;
-    src: url("assets/Lato-Black.ttf.ttf") format("truetype");
+    src: url("assets/Lato-Black.ttf") format("truetype");
 }
 
 html {
     box-sizing: border-box;
-    font-size: 12px;
+    font-size: 30px;
+    line-height: 30px;
 }
 
 *,
@@ -97,6 +98,26 @@ p, h1, h2, a, span {
     font-family: 'Lato', sans-serif;
 }
 
+h2 {
+    color: #666d89;
+    font-size: 0.99rem;
+    font-family: 'Lato Black', sans-serif;
+}
+
+h3 {
+    color: #666d89;
+    font-size: 0.59rem;
+    font-family: 'Lato Black', sans-serif;
+}
+
+p {
+    font-family: 'Lato Light', sans-serif;
+    color: #767e9e;
+    font-size: 0.6rem;
+    line-height: 1rem;
+    text-align: justify;
+}
+
 .content {
     max-width: 1020px;
     width: 100%;
@@ -106,46 +127,44 @@ p, h1, h2, a, span {
 .portfolio {
     background-color: #2d303a;
     border-bottom: 6px solid #323746;
-    padding: 67px 40px;
+    
+}
+
+.portfolio__content {
+    background-color: inherit;
+    padding: 64px 40px 66.5px;
 }
 
 .portfolio__description {
-    margin-bottom: 15px;
+    margin-bottom: 1px;
 }
 
-.main__content h2 {
-    color: #666d89;
-    font-size: 30px;
-    font-family: 'Lato Black', sans-serif;
-    margin-bottom: 18px;
-}
-
-.main__content p {
-    color: #767e9e;
-    font-size: 18px;
-    line-height: 30px;
-    letter-spacing: -0.17px;
-    text-align: justify;
+.portfolio__description h2 {
+    margin-bottom: 21px;
 }
 
 .portfolio__tags {
-    margin-bottom: 4px;
+    margin-bottom: 1.5px;
 }
 
-.portfolio__tags span {
+.portfolio-tags__unit {
     color: #767e9e;
-    font-size: 12px;
+    font-size: 0.4rem;
     border: 1px solid #666d89;
-    padding: 3px 6px;
+    padding: 3px 6px 4px;
     border-radius: 5px;
-    margin-right: 7px;
-    /* line-height: 21.56px; */
+    margin-right: 2px;
 }
 
-.portfolio__tags span:hover {
+.portfolio-tags__unit:hover {
     color: #dedede;
     border-color: #dedede;
     cursor: pointer;
+}
+
+.portfolio-tags__unit_selected {
+    color: #dedede;
+    border-color: #dedede;
 }
 
 .portfolio__cards {
@@ -178,23 +197,28 @@ p, h1, h2, a, span {
 .about {
     background-color: #f2f2f2;
     border-bottom: 6px solid #ffffff;
-    padding: 65px 40px;
+}
+
+.about__content {
+    padding: 64px 40px 68px;
 }
 
 .about__description {
     margin-bottom: 46px;
 }
 
+.about__description h2 {
+    margin-bottom: 20px;
+}
+
 .about__description p {
-    line-height: 30px;
-    letter-spacing: -0.17px;
+    line-height: 1rem;
     text-align: justify;
 }
 
 .about__cards {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
 }
 
 .about-card {
@@ -208,19 +232,15 @@ p, h1, h2, a, span {
 }
 
 .about-card h3 {
-    color: #666d89;
-    font-size: 18px;
-    font-family: 'Lato Black', sans-serif;
     margin-bottom: 9px;
-    /* max-width: inherit; РАЗОБРАТЬСЯ С ЭТИМ */
 }
 
 .about-card p {
-    font-size: 12px;
-    line-height: 21.56px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.4rem;
+    line-height: 0.71rem;
     text-align: justify;
-    letter-spacing: -0.17px;
-    /* color: #767e9e; */
+    margin-bottom: 23px;
 }
 
 .about-card__photo {
@@ -233,23 +253,37 @@ p, h1, h2, a, span {
     width: 100%;
 }
 
-.about-card__tags {
+.tag-bar {
     display: flex;
-    margin-top: 23px;
+    padding-top: 1px;
+    padding-left: 1px;
 }
 
-.about-card__tag {
+.tag-bar__unit {
     border: 1px solid #666d89;
     border-radius: 50px;
-    text-align: center;
     width: 32px;
     height: 32px;
-    line-height: 37px;
-    margin-right: 8px;
+    margin-right: 8px; 
+    position: relative;
 }
 
-.about-card__tag:hover {
-    /* border-color: red; */
+.tag-bar__unit img {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.tag-bar__unit:hover {
     border-color: brown;
     cursor: pointer;
+}
+
+.tag-bar__unit_facebook img {
+    top: 8px;
+    left: 11px;
+}
+
+.tag-bar__unit_twitter img {
+    top: 9.5px;
 }

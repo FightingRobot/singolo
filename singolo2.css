@@ -224,6 +224,7 @@ p {
 .about-card {
     max-width: 300px;
     width: 100%;
+    overflow: hidden;
 }
 
 .about-card:nth-child(2n+2) {
@@ -233,6 +234,7 @@ p {
 
 .about-card h3 {
     margin-bottom: 9px;
+    white-space: nowrap;
 }
 
 .about-card p {

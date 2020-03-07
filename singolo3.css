@@ -130,7 +130,7 @@ p {
 }
 
 .contact-us__content {
-    padding: 63px 40px 30.5px;
+    padding: 63px 40px 32.5px;
 }
 
 .contact-us__description {
@@ -156,7 +156,7 @@ p {
     width: 619px;
 }
 
-input {
+.contact-us-form input {
     width: inherit;
     height: 38px;
     background-color: #d6564f;
@@ -168,12 +168,12 @@ input {
     color: #f0d8d9;
 }
 
-input::placeholder,
-textarea::placeholder {
+.contact-us-form input::placeholder,
+.contact-us-form textarea::placeholder {
     color: #f48c8f;
 }
 
-textarea {
+.contact-us-form textarea {
     font-family: inherit;
     width: 619px;
     height: 202px;
@@ -187,10 +187,25 @@ textarea {
     margin-top: 3px;
 }
 
-input:focus,
-textarea:focus {
+.contact-us-form input:focus,
+.contact-us-form textarea:focus {
     background-color: brown;
     outline: none;
+}
+
+.btn_send {
+    border-radius: 5px;
+    background-color: #d6564f;
+    border: none;
+    color: #f0d8d9;
+}
+
+.btn_send:hover {
+    background-color: brown;
+}
+
+.btn_send:active {
+    background-color: black;
 }
 
 .contact-us__contact-info {
@@ -221,20 +236,36 @@ textarea:focus {
     line-height: 0.71rem;
     text-align: justify;
     text-decoration: none;
+    position: relative;
 }
 
 .contact-us__contact-info a:hover {
     color: black;
 }
 
-.contact-us__contact-info a:before {
+.contact-us__contact-info a::before {
     content: '';
-    background-image: url('assets/contact-us/map-marker-alt-solid.svg');
     background-repeat: no-repeat;
-    width: 13px;
-    height: 13px;
+    width: 12px;
+    height: 12px;
     display: inline-block;
     margin-right: 10px;
+}
+
+.contact-us__contact-info .contact-us__adress::before {
+    background-image: url('assets/contact-us/map-marker-alt-solid.svg');
+    position: relative;
+    left: 2px;
+}
+
+.contact-us__contact-info .contact-us__tel::before {
+    background-image: url('assets/contact-us/phone-solid.svg');
+}
+
+.contact-us__contact-info .contact-us__site::before {
+    position: relative;
+    background-image: url('assets/contact-us/envelope-solid.svg');
+    top: 3px;
 }
 
 .footer {
@@ -244,7 +275,6 @@ textarea:focus {
 .footer__content {
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
     padding: 17px 32px 33px 42px;
 }
 
@@ -266,10 +296,8 @@ textarea:focus {
 .tag-bar__unit {
     border: 1px solid #666d89;
     border-radius: 50px;
-    /* text-align: center; */
     width: 32px;
     height: 32px;
-    /* line-height: 37px;*/
     margin-right: 8px; 
     position: relative;
 }

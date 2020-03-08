@@ -596,7 +596,7 @@ p {
 }
 
 .contact-us-form textarea {
-    font-family: inherit;
+    font-family: 'Lato', sans-serif;
     width: 619px;
     height: 202px;
     background-color: #d6564f;

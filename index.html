@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Singolo</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -19,10 +20,10 @@
             <div class="header__right">
                 <div class="header__menu header-menu">
                     <a class="header-menu__unit header-menu__unit_selected" href="#">HOME</a>
-                    <a class="header-menu__unit" href="#">SERVICES</a>
-                    <a class="header-menu__unit" href="#">PORTFOLIO</a>
-                    <a class="header-menu__unit" href="#">ABOUT</a>
-                    <a class="header-menu__unit" href="#">CONTACT</a>
+                    <a class="header-menu__unit" href="#anc-services">SERVICES</a>
+                    <a class="header-menu__unit" href="#anc-portfolio">PORTFOLIO</a>
+                    <a class="header-menu__unit" href="#anc-about">ABOUT</a>
+                    <a class="header-menu__unit" href="#anc-contact">CONTACT</a>
                 </div>
             </div>
         </div>
@@ -31,10 +32,27 @@
         <div class="slider">
             <div class="content slider__content">
                 <div class="angle-left"></div>
+                <div class="slider__carousel">
+
+                    <div class="slider-slide">
+                        <img class="slider-slide__img" src="assets/slider/slide2.png" alt="">
+                    </div>
+
+                    <div class="slider-slide">
+                        <img class="slider-slide__img" src="assets/slider/slide1.png" alt="">
+                        <div class="slider-slide__img_black1"></div>
+                        <div class="slider-slide__img_black2"></div>
+                    </div>
+
+                </div>
                 <div class="angle-right"></div>
             </div>
+
+
+
         </div>
-        <div class="main__services services">
+        </div>
+        <div class="main__services services" id="anc-services">
             <div class="content services__content">
                 <div class="services__description">
                     <h2>Our Services</h2>
@@ -51,7 +69,8 @@
                         </div>
                         <div class="services-card__content">
                             <h3>Custom Design</h3>
-                            <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus
+                            <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra
+                                lacus
                                 ut, ultrices velit.</p>
                         </div>
                     </div>
@@ -72,7 +91,8 @@
                         </div>
                         <div class="services-card__content">
                             <h3>Love Is The Answer</h3>
-                            <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
+                            <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat
+                                felis.
                                 Quisque condimentum.</p>
                         </div>
                     </div>
@@ -109,60 +129,61 @@
                 </div>
             </div>
         </div>
-        <div class="portfolio">
+        <div class="portfolio" id="anc-portfolio">
             <div class="content portfolio__content">
                 <div class="portfolio__description">
                     <h2>Portfolio</h2>
-                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
+                        elit.
                     </p>
                 </div>
                 <div class="portfolio__tags portfolio-tags">
-                    <span class='portfolio-tags__unit portfolio-tags__unit_selected'>All</span>
-                    <span class='portfolio-tags__unit'>Web Design</span>
-                    <span class='portfolio-tags__unit'>Graphic Design</span>
-                    <span class='portfolio-tags__unit'>Artwork</span>
+                    <span class='portfolio-tags__unit portfolio-tags__unit_all portfolio-tags__unit_selected'>All</span>
+                    <span class='portfolio-tags__unit portfolio-tags__unit_web-design'>Web Design</span>
+                    <span class='portfolio-tags__unit portfolio-tags__unit_graphic-design'>Graphic Design</span>
+                    <span class='portfolio-tags__unit portfolio-tags__unit_artwork'>Artwork</span>
                 </div>
                 <div class="portfolio__cards">
-                    <div class="portfolio__card">
+                    <div class="portfolio__card portfolio__card_web-design">
                         <img src="assets/portfolio/ship.png" alt="Ship">
                     </div>
-                    <div class="portfolio__card">
+                    <div class="portfolio__card portfolio__card_graphic-design">
                         <img src="assets/portfolio/face.png" alt="Face">
                     </div>
-                    <div class="portfolio__card">
+                    <div class="portfolio__card portfolio__card_artwork">
                         <img src="assets/portfolio/city.png" alt="City">
                     </div>
-                    <div class="portfolio__card">
+                    <div class="portfolio__card portfolio__card_web-design">
                         <img src="assets/portfolio/robot.png" alt="Robot">
                     </div>
-                    <div class="portfolio__card">
+                    <div class="portfolio__card portfolio__card_graphic-design">
                         <img src="assets/portfolio/krols.png" alt="Krols">
                     </div>
-                    <div class="portfolio__card">
+                    <div class="portfolio__card portfolio__card_web-design">
                         <img src="assets/portfolio/sdk.png" alt="SDK">
                     </div>
-                    <div class="portfolio__card">
+                    <div class="portfolio__card portfolio__card_graphic-design">
                         <img src="assets/portfolio/suprema.png" alt="Suprema">
                     </div>
-                    <div class="portfolio__card">
+                    <div class="portfolio__card portfolio__card_web-design">
                         <img src="assets/portfolio/birds.png" alt="Birds">
                     </div>
-                    <div class="portfolio__card">
+                    <div class="portfolio__card portfolio__card_web-design">
                         <img src="assets/portfolio/shrek.png" alt="Shrek">
                     </div>
-                    <div class="portfolio__card">
+                    <div class="portfolio__card portfolio__card_graphic-design">
                         <img src="assets/portfolio/words.png" alt="Words">
                     </div>
-                    <div class="portfolio__card">
+                    <div class="portfolio__card portfolio__card_web-design">
                         <img src="assets/portfolio/monster.png" alt="Monster">
                     </div>
-                    <div class="portfolio__card">
+                    <div class="portfolio__card portfolio__card_artwork">
                         <img src="assets/portfolio/screen.png" alt="Screen">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="about">
+        <div class="about" id="anc-about">
             <div class="content about__content">
                 <div class="about__description">
                     <h2>About Us</h2>
@@ -176,7 +197,8 @@
                             <img src="assets/portfolio/jensen.png" alt="Adam Jensen">
                         </div>
                         <h3>Adam Jensen</h3>
-                        <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor
+                        <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus
+                            dolor
                             id lorem.</p>
                         <div class="about-card__tags tag-bar">
                             <a href="#" class="tag-bar__unit tag-bar__unit_facebook">
@@ -198,7 +220,8 @@
                             <img src="assets/portfolio/miles.png" alt="Desmond Miles">
                         </div>
                         <h3>Desmond Miles</h3>
-                        <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut,
+                        <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus
+                            ut,
                             ultrices velit.</p>
                         <div class="about-card__tags tag-bar">
                             <a href="#" class="tag-bar__unit tag-bar__unit_facebook">
@@ -240,7 +263,7 @@
                 </div>
             </div>
         </div>
-        <div class="contact-us">
+        <div class="contact-us" id='anc-contact'>
             <div class="content contact-us__content">
                 <div class="contact-us__description">
                     <h2>Get a Quote</h2>
@@ -256,11 +279,13 @@
                         <textarea name="" id="ymessage" placeholder="Describe your project in detail..."></textarea>
                         <button class="btn btn_send">SEND</button>
                     </form>
+
                     <div class="contact-us__contact-info">
                         <h3>Contact Information</h3>
                         <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viver-ra nibh. Fusce vitae aliquam
                             tellus.
-                            Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet
+                            Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at
+                            aliquet
                             turpis, et consequat felis.</p>
                         <a href="#" class="contact-us__adress">Elm St. 14/05 Lost City </a>
                         <a href="tel:035283318635" class="contact-us__tel">03528 331 86 35 </a>

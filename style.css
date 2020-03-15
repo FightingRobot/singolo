@@ -175,6 +175,7 @@ p {
     color: #ffffff;
     text-decoration: none;
     font-size: 12px;
+    transition: 0.5s ease;
 }
 
 .header-menu__unit::before {
@@ -214,15 +215,18 @@ p {
 }
 
 .angle-left {
-    position: relative;
-    top: 5px;
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    transition: 0.5s ease;
 }
 
 .angle-left::before {
     content: '';
     width: 5px;
     height: 20px;
-    background-color: #cb4649;
+    background-color: #2d303a;
+    opacity: .7;
     border-radius: 10px;
     position: absolute;
     left: 48px;
@@ -234,7 +238,8 @@ p {
     content: '';
     width: 5px;
     height: 20px;
-    background-color: #cb4649;
+    background-color: #2d303a;
+    opacity: .7;
     border-radius: 10px;
     position: absolute;
     left: 48px;
@@ -244,7 +249,7 @@ p {
 
 .angle-left:hover::before,
 .angle-left:hover::after {
-    background-color: #2d303a;
+    opacity: 1;
     cursor: pointer;
 }
 
@@ -254,15 +259,20 @@ p {
 }
 
 .angle-right {
-    position: relative;
-    top: 5px;
+    position: absolute;
+    /* top: 5px; */
+    right: 0;
+    z-index: 100;
+    transition: 0.5s ease;
 }
 
 .angle-right::before {
     content: '';
     width: 5px;
     height: 20px;
-    background-color: #cb4649;
+    /* background-color: #cb4649; */
+    background-color: #2d303a;
+    opacity: .7;
     border-radius: 10px;
     position: absolute;
     right: 45px;
@@ -274,7 +284,9 @@ p {
     content: '';
     width: 5px;
     height: 20px;
-    background-color: #cb4649;
+    /* background-color: #cb4649; */
+    background-color: #2d303a;
+    opacity: .7;
     border-radius: 10px;
     position: absolute;
     right: 45px;
@@ -284,7 +296,7 @@ p {
 
 .angle-right:hover::before,
 .angle-right:hover::after {
-    background-color: #2d303a;
+    opacity: 1;
     cursor: pointer;
 }
 
@@ -297,18 +309,80 @@ p {
     height: 600px;
     background-color: #f06c64;
     border-bottom: 6px solid #ea676b;
+    position: relative;
+    transition: 1s;
 }
 
 .slider__content {
+    position: relative;
     height: inherit;
     border-bottom: inherit;
     background-color: inherit;
-    background-image: url(assets/slider.png);
-    background-position-y: -6px;
     display: flex;
     align-items: center;
-    position: relative;
     justify-content: space-between;
+    overflow: hidden;
+}
+
+.slider__carousel {
+    display: flex;
+    height: 594px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-left: -1020px;
+}
+
+.slider-slide:first-child {
+    background-color: inherit;
+    height: 594px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all ease 1s;
+    z-index: 50;
+}
+
+.slider-slide:nth-child(2) {
+    background-color: inherit;
+    height: 594px;
+    position: absolute;
+    left: 1020px;
+    top: 0;
+    transition: all ease 1s;
+    z-index: 10;
+}
+
+.slider-slide:nth-child(3) {
+    background-color: inherit;
+    height: 594px;
+    position: absolute;
+    left: 2040px;
+    top: 0;
+    transition: all ease 1s;
+    z-index: 50;
+}
+
+.slider-slide__img_black1 {
+    position: absolute;
+    top: 118px;
+    left: 125px;
+    width: 190px;
+    height: 334.5px;
+    cursor: pointer;
+    transition: 1s;
+    z-index: 15;
+}
+
+.slider-slide__img_black2 {
+    position: absolute;
+    top: 190px;
+    right: 200px;
+    width: 335px;
+    height: 189.5px; 
+    cursor: pointer;
+    transition: 1s;
+    z-index: 15;
 }
 
 .services {
@@ -405,6 +479,7 @@ p {
     padding: 3px 6px 4px;
     border-radius: 5px;
     margin-right: 2px;
+    transition: 0.5s ease;
 }
 
 .portfolio-tags__unit:hover {
@@ -431,6 +506,11 @@ p {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 20px;
+}
+
+.portfolio-card_selected {
+    border: 5px solid #F06C64;
+    transition: 0.1s ease;
 }
 
 .portfolio__card img {
@@ -519,6 +599,7 @@ p {
     height: 32px;
     margin-right: 8px; 
     position: relative;
+    transition: 0.5s ease;
 }
 
 .tag-bar__unit img {
@@ -615,6 +696,7 @@ p {
     background-color: #d6564f;
     border: none;
     color: #f0d8d9;
+    transition: 0.5s ease;
 }
 
 .btn_send:hover {
@@ -654,6 +736,7 @@ p {
     text-align: justify;
     text-decoration: none;
     position: relative;
+    transition: 0.5s ease;
 }
 
 .contact-us__contact-info a:hover {
@@ -717,6 +800,7 @@ p {
     height: 32px;
     margin-right: 8px; 
     position: relative;
+    transition: 0.5s ease;
 }
 
 .tag-bar__unit img {

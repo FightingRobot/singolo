@@ -1,3 +1,9 @@
+let headerHeight = document.querySelector('.header').offsetHeight;
+
+function selectorRemover(selector) {
+    document.querySelector(selector).classList.remove(selector);
+}
+
 let headerMenuUnits = document.querySelectorAll('.header-menu__unit');
 
 for (let unit of headerMenuUnits) {
@@ -6,8 +12,34 @@ for (let unit of headerMenuUnits) {
 
 function headerSelector() {
     if (!event.target.className.includes('header-menu__unit_selected')) {
-        document.querySelector('.header-menu__unit_selected').classList.remove('header-menu__unit_selected')
-        event.target.classList.add('header-menu__unit_selected')
+        document.querySelector('.header-menu__unit_selected').classList.remove('header-menu__unit_selected');
+        event.target.classList.add('header-menu__unit_selected');
+    }
+    document.querySelector('html').scrollTo(0, document.getElementById(event.target.innerHTML).offsetTop - headerHeight + 10);
+}
+
+window.onscroll = menuUnitSelector;
+
+function menuUnitSelector() {
+    if (document.documentElement.getBoundingClientRect().top < -document.getElementById('HOME').offsetTop + headerHeight) {
+        document.querySelector('.header-menu__unit_selected').classList.remove('header-menu__unit_selected');
+        document.querySelector('.header-menu__home').classList.add('header-menu__unit_selected');
+    }
+    if (document.documentElement.getBoundingClientRect().top < -document.getElementById('SERVICES').offsetTop + headerHeight) {
+        document.querySelector('.header-menu__unit_selected').classList.remove('header-menu__unit_selected');
+        document.querySelector('.header-menu__services').classList.add('header-menu__unit_selected');
+    }
+    if (document.documentElement.getBoundingClientRect().top < -document.getElementById('PORTFOLIO').offsetTop + headerHeight) {
+        document.querySelector('.header-menu__unit_selected').classList.remove('header-menu__unit_selected');
+        document.querySelector('.header-menu__portfolio').classList.add('header-menu__unit_selected');
+    }
+    if (document.documentElement.getBoundingClientRect().top < -document.getElementById('ABOUT').offsetTop + headerHeight) {
+        document.querySelector('.header-menu__unit_selected').classList.remove('header-menu__unit_selected');
+        document.querySelector('.header-menu__about').classList.add('header-menu__unit_selected');
+    }
+    if (document.documentElement.getBoundingClientRect().top < -document.getElementById('CONTACT').offsetTop + headerHeight) {
+        document.querySelector('.header-menu__unit_selected').classList.remove('header-menu__unit_selected');
+        document.querySelector('.header-menu__contact').classList.add('header-menu__unit_selected');
     }
 }
 
@@ -92,6 +124,10 @@ function showSent() {
         message.textContent += 'Описание: ' + document.getElementById('ymessage').value + '\n'
     }
     alert(message.textContent);
+    document.getElementById('name').value = '';
+    document.getElementById('email-field').value = '';
+    document.getElementById('sub').value = '';
+    document.getElementById('ymessage').value = '';
     event.preventDefault();
 }
 

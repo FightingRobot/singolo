@@ -11,6 +11,10 @@ for (let unit of headerMenuUnits) {
 }
 
 function headerSelector() {
+    window.onscroll = '';
+    setTimeout(function () {
+        window.onscroll = menuUnitSelector;
+    }, 1000)
     if (!event.target.className.includes('header-menu__unit_selected')) {
         document.querySelector('.header-menu__unit_selected').classList.remove('header-menu__unit_selected');
         event.target.classList.add('header-menu__unit_selected');

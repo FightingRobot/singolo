@@ -318,3 +318,10 @@ function moveLeft() {
         sliderCarousel.prepend(newSlide);
     }
 }
+
+let burger = document.querySelector('.header__burger');
+burger.onclick = menuOpener;
+
+function menuOpener() {
+    burger.classList.toggle('header__burger_active')
+}

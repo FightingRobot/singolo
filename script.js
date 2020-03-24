@@ -320,8 +320,10 @@ function moveLeft() {
 }
 
 let burger = document.querySelector('.header__burger');
+let menuOverlay = document.querySelector('.header__right');
 burger.onclick = menuOpener;
 
 function menuOpener() {
-    burger.classList.toggle('header__burger_active')
+    burger.classList.toggle('header__burger_active');
+    menuOverlay.classList.toggle('header__right_shown');
 }

@@ -149,6 +149,7 @@ p {
     position: relative;
     cursor: pointer;
     transition: 0.6s;
+    z-index: 100;
 }
 
 .header__burger span {
@@ -191,17 +192,17 @@ p {
     width: 50%;
 }
 
-.header__left h1 {
+.logo h1 {
     font-size: 0.8rem;
 }
 
-.header__left a {
+.logo a {
     font-family: 'Lato Bold', sans-serif;
     text-decoration: none;
     color: #ffffff;
 }
 
-.header__left h1 span {
+.logo h1 span {
     font-family: 'Lato Bold', sans-serif;
     color: #f06c64;
     
@@ -488,7 +489,7 @@ p {
 
 .services-card {
     display: flex;
-    width: 299px;
+    max-width: 299px;
     justify-content: space-between;
     height: 90px;
     margin-bottom: 33px;
@@ -758,6 +759,7 @@ p {
     color: #f0d8d9;
     font-size: 0.39rem;
     margin-top: 3px;
+    margin-bottom: 15px;
 }
 
 .contact-us-form input:focus,
@@ -767,19 +769,23 @@ p {
 }
 
 .btn_send {
+    font-size: 14px;
     border-radius: 5px;
-    background-color: #d6564f;
-    border: none;
-    color: #f0d8d9;
+    background-color: #FBC65F;
+    border: 2px solid #FBC65F;
+    color: #886A30;
     transition: 0.5s ease;
+    width: 135px;
+    height: 38px;
+    font-family: 'Lato Bold', sans-serif;
 }
 
 .btn_send:hover {
-    background-color: brown;
+    border: 2px solid #886A30;
 }
 
 .btn_send:active {
-    background-color: black;
+    background-color: #886A30;
 }
 
 .contact-us__contact-info {
@@ -899,6 +905,13 @@ p {
     top: 9.5px;
 }
 
+.logo_375px {
+    display: none;
+    position: absolute;
+    top: 32px;
+    left: 87px;
+}
+
 @media screen and (min-width: 1020px) {
     .portfolio__cards {
         max-height: 621px;
@@ -978,8 +991,47 @@ p {
         align-self: center;
     }
 
+    .logo_375px {
+        display: block;
+    }
+
+    .header__right_shown {
+        transform: translateX(0) !important;
+    }
+
     .header__right {
+        position: absolute;
+        background-color: #2d303a;
+        width: 278px;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        transform: translateX(-278px);
+        transition: 0.6s;
+    }
+
+    .header__menu {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-menu__unit {
+        font-size: 24px;
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .header-menu__unit::before {
         display: none;
+    }
+
+    .angle-left {
+        left: -30px;
+    }
+
+    .angle-right {
+        right: -30px;
     }
 
     .services__cards {

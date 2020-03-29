@@ -19,6 +19,10 @@ function headerSelector() {
         document.querySelector('.header-menu__unit_selected').classList.remove('header-menu__unit_selected');
         event.target.classList.add('header-menu__unit_selected');
     }
+    if (menuOverlay.className.includes('header__right_shown')) {
+        menuOverlay.classList.remove('header__right_shown');
+        burger.classList.remove('header__burger_active');
+    }
     document.querySelector('html').scrollTo(0, document.getElementById(event.target.innerHTML).offsetTop - headerHeight + 10);
 }
 
